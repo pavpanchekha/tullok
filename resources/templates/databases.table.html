@@ -1,0 +1,45 @@
+{include file="header.html" title="Databases" jsfile="databases.table.js" cssfile="databases.css"}
+
+        <div class="bar" id="menu">
+	    <span class="title">Database Table: </span>
+	    <a href="databases" class="button"><img src="resources/images/list.png" alt="list" />View as List</a>
+	    <a href="databases/xml" class="button"><img src="resources/images/xml.png" alt="xml" />Download as XML</a>
+	</div>
+	<div class="drop-shadow"></div>
+	<div class="content">
+	    <ul id="navigation">
+		<li class="selected"><a href="databases"><img src="resources/images/database.png" alt="" /><span>Databases</span></a></li>
+		<li><a href="users"><img src="resources/images/user.png" alt="" /><span>Users</span></a></li>
+		<li><a href="processes"><img src="resources/images/process.png" alt="" /><span>Processes</span></a></li>
+		<li><a href="backup/export"><img src="resources/images/export.png" alt="" /><span>Export</span></a></li>
+		<li><a href="backup/import"><img src="resources/images/import.png" alt="" /><span>Import</span></a></li>
+	    </ul>
+	    <div class="scrolling">
+		<table>
+		    <thead>
+			<tr>
+			    <th scope="col">Row</th>
+			    <th scope="col">Name</th>
+			    <th scope="col"># Tables</th>
+			    <th scope="col">Tables</th>
+			</tr>
+		    </thead>
+		    <tbody>
+{section name=i loop=$databases}
+			<tr>
+			    <th scope="row">{$smarty.section.i.index+1}</th>
+			    <td>{$databases[i]->name|escape}</td>
+			    <td>{$databases[i]->tables|@count}</td>
+			    <td>
+{section name=j loop=$databases[i]->tables}
+				{$databases[i]->tables[j]|escape}, 
+{/section}
+			    </td>
+			</tr>
+{/section}
+		    </tbody>
+		</table>
+            </div>
+        </div>
+
+{include file="footer.html"}

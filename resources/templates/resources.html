@@ -1,0 +1,44 @@
+        <!-- CSS Style Sheets -->
+        <link rel="stylesheet" type="text/css" media="screen" href="resources/styles/default.css" />
+        <link rel="stylesheet" type="text/css" media="print" href="resources/styles/print.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="resources/styles/main.css" />
+
+        <!-- Theme file -->
+        <link rel="stylesheet" type="text/css" media="screen" href="resources/styles/themes/{#theme#}/theme.css" />
+
+        <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="screen" href="resources/styles/ie.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="resources/styles/themes/{#theme#}/ie.css" />
+        <![endif]-->
+
+        <!-- Libraries -->
+{if #google# == "true"}
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+{else}
+        <script type="text/javascript" src="resources/libraries/jquery.js"></script>
+{/if}
+        <script type="text/javascript" src="resources/libraries/tablesorter.js"></script>
+        <link rel="stylesheet" type="text/css" href="resources/libraries/Thickbox/thickbox.css" />
+        <script type="text/javascript" src="resources/libraries/Thickbox/thickbox.js"></script>
+        <script type="text/javascript" src="resources/libraries/livequery.js"></script>
+        <script type="text/javascript" src="resources/libraries/SHJS/shjs.js"></script>
+        <link rel="stylesheet" type="text/css" href="resources/libraries/SHJS/style.css" />
+        <script type="text/javascript" src="resources/libraries/SHJS/langs/js.js"></script>
+        <script type="text/javascript" src="resources/libraries/SHJS/langs/sh.js"></script>
+        <script type="text/javascript" src="resources/libraries/SHJS/langs/sql.js"></script>
+        <script type="text/javascript" src="resources/libraries/chain.js"></script>
+        <script type="text/javascript" src="resources/libraries/cookie.js"></script>
+
+        <!-- PNG fix -->
+        <!--[if lt IE 7]>
+        <script defer type="text/javascript" src="resources/scripts/pngfix.js"></script>
+        <![endif]-->
+
+        <!-- Site-wide script -->
+        <script type="text/javascript" src="resources/scripts/console.js"></script>
+        <script type="text/javascript" src="resources/scripts/main.js"></script>
+
+{if #log_load# == "true"}
+        <script type="text/javascript" src="resources/scripts/log_load.js"></script>
+{/if}
+

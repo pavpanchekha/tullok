@@ -1,0 +1,70 @@
+/* Pavel Panchekha and Kamran Khan */
+
+/*body, html {
+    min-width: 620px;
+    min-height: 314px;
+}*/
+
+.content {
+    position: absolute;
+    top: 9.8em;
+    left: 30px;
+    right: 30px;
+    bottom: 5.9em;
+    margin: auto;
+    overflow: auto;
+}
+
+body.console .content {
+    bottom: 21.9em;
+}
+
+.scrolling {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: auto;
+    padding: 10px 0 0 10px;;
+}
+
+.scrolling ul {
+    list-style-type: none;
+    margin: -10px 0 0 -10px;
+}
+
+.scrolling > * {
+    list-style-type: none;
+/*    margin: 20px;*/
+}
+
+#navigation {
+    list-style: none;
+}
+
+#navigation li {
+    margin: 0 20px 0 0;
+    float: left;
+    display: block;
+    padding: 3px 15px 4px 6px;
+    text-decoration: none;
+
+    height: 2em;
+    /*line-height: 24px;*/
+    font-size: 11px;
+}
+
+#navigation li.disabled {
+    z-index: 2;
+    position: relative;
+}
+
+#navigation span {
+    position: relative;
+    top: -8px;
+}
+
+#navigation img {
+    margin: 0px 10px 0 0;
+}

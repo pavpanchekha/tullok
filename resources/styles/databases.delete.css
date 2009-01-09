@@ -1,0 +1,19 @@
+/* Pavel Panchekha and Kamran Kahn */
+
+@import "widgets.css";
+@import "two-paned.css";
+
+#delForm {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 20px;
+}
+
+#delForm p {
+    margin-left: 5px;
+}
+
+#delForm input {
+    width: 100%;
+    margin: 2px 0;
+}

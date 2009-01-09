@@ -1,0 +1,16 @@
+{include file="header.html" title="Add Database" jsfile="databases.add.js" cssfile="databases.add.css"}
+        <div class="content">
+	  <div class="scrolling">
+{if isset($added) and $added}
+	    <div class="msg success"><div><div>
+	      Database {if isset($dbName) and $dbName}&ldquo;{$dbName}&rdquo;{/if} added successfully.
+	      <a href="databases/" title="View all databases">&laquo; Back to Databases</a>
+	    </div></div></div>
+{/if}
+	    <form method="post" action="databases/add" id="addForm">
+	      <label for="dbName" class="over">Database Name</label><input id="dbName" name="dbName" />
+	      <button type="submit">Submit</button>
+	    </form>
+	  </div>
+	</div>
+{include file="footer.html"}

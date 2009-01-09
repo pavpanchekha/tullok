@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!-- Re-anchor page -->
+		<base href="{$root}{$path}" />
+
+		<!-- Page Metadata -->
+		<title> Tullok: {$title|default "$Title"} </title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+
+{include file="resources.html" title="Databases"}
+
+		<!-- Javascript files -->
+		<script type="text/javascript" src="resources/scripts/{$jsfile}"></script>
+
+		<!-- CSS files -->
+		<link rel="stylesheet" href="resources/styles/{$cssfile}" />
+	</head>
+	<body>
+		<div id="header">
+			<ul id="headerlinks">
+				<li><a href="accounts/logout"><img src="resources/images/logout.png" alt="" /> Log out </a></li>
+				<li><a href="databases"><img src="resources/images/home.png" alt="" /> Home </a></li>
+				<li id="quicklinks"><img src="resources/images/quicklinks.png" alt="" /> Quicklinks <ul class="dropdown"></ul></li>
+			</ul>
+		</div>

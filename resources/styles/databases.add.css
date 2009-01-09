@@ -1,0 +1,20 @@
+/* Pavel Panchekha and Kamran Kahn */
+
+@import "widgets.css";
+@import "two-paned.css";
+
+
+#addForm {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 20px;
+}
+
+#addForm p {
+    margin-left: 5px;
+}
+
+#addForm input {
+    width: 100%;
+    margin: 2px 0;
+}

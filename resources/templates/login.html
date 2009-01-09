@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<!-- Re-anchor page -->
+	<base href="{$root}{$path}" />
+
+	<!-- Page Metadata -->
+	<title> Tullok: Login </title>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+
+        <!-- CSS Style Sheets -->
+        <link rel="stylesheet" type="text/css" media="screen" href="resources/styles/default.css" />
+        <link rel="stylesheet" type="text/css" media="print" href="resources/styles/print.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="resources/styles/login.css" />
+
+        <!-- Theme file -->
+        <link rel="stylesheet" type="text/css" media="screen" href="resources/styles/themes/{#theme#}/login.css" />
+
+        <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="screen" href="resources/styles/ie.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="resources/styles/themes/{#theme#}/ie.css" />
+        <![endif]-->
+
+        <!-- Libraries -->
+        <script type="text/javascript" src="resources/libraries/jquery.js"></script>
+
+        <!-- PNG fix -->
+        <!--[if lt IE 7]>
+        <script defer type="text/javascript" src="resources/scripts/pngfix.js"></script>
+        <![endif]-->
+
+        <!-- Site-wide script -->
+        <script type="text/javascript" src="resources/scripts/login.js"></script>
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="resources/styles/login.css" />
+        <script type="text/javascript" src="resources/libraries/livequery.js"></script>
+    </head>
+    <body><p>&nbsp;</p>
+        <div id="main">
+            <div id="header">
+                <span></span>
+            </div>
+            <div id="form">
+{if isset($error)}
+              <div class="msg error"><div><div>
+                Could not log in: {$error}
+              </div></div></div>
+{/if}
+            <form action="accounts/login" method="post">
+            <fieldset>
+            <legend>MySQL Database Information</legend>
+                <div><label for="name" class="over">Username</label><input name="name" id="name" value="" /></div>
+                <div><label for="pass" class="over">Password</label><input type="password" name="pass" id="pass" value="" /></div>
+                <div><label for="host" class="over">Hostname</label><input name="host" id="host" value="localhost" /></div>
+            </fieldset>
+	    <fieldset class="nodisplay" >
+	    <button type="submit">Log in</button>
+            </fieldset>
+            </form>
+	    </div>
+	    <div id="footerLogin"><p>&copy; 2008 Tullok</p></div>
+         </div>
+    </body>
+</html>

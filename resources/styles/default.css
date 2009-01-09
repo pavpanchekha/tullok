@@ -1,0 +1,125 @@
+/*
+    Tripoli is a generic CSS standard for HTML rendering.
+    Copyright (C) 2007 David Hellsing
+
+    http://monc.se/tripoli/
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/*@import url("plug.css")*/
+/* ---------- RESET ---------- */
+
+*{margin:0;padding:0;text-decoration:none;font-size:1em;outline:none}
+code,kbd,samp,pre,tt,var,textarea,input,select,isindex,listing,xmp,plaintext{font:inherit;font-size:1em;white-space:normal}
+dfn,i,cite,var,address,em{font-style:normal}
+th,b,strong,h1,h2,h3,h4,h5,h6,dt{font-weight:normal}
+a,img,a img,iframe,form,fieldset,abbr,acronym,object,applet,table{border:none}
+caption,th,td{text-align:left;}
+html{background:white;color:black;line-height:1}
+q{quotes:'' ''}
+ul,ol,dir,menu{list-style:none}
+sub,sup{vertical-align:baseline}
+a{color:inherit}
+hr{display:none}
+/* ---------- DISABLE ---------- */
+font,basefont{color:inherit;font:inherit;font-size:100%}
+center{text-align:inherit}
+s,strike,u{text-decoration:inherit}
+*[align]{text-align:inherit}
+img{margin:0;border:none}
+ol{list-style-type:decimal}
+body{background-color:transparent}
+table,tr,th,td{width:auto;height:auto;background-color:transparent;vertical-align:inherit;border:none;}
+nobr{white-space:normal}
+marquee{overflow:visible}
+blink{text-decoration:none}
+/* ---------- GENERAL ---------- */
+html{font-size:62.5%;font-family:sans-serif}
+strong,th,thead td,h1,h2,h3,h4,h5,h6,dt{font-weight:bold}
+cite,em,dfn{font-style:italic}
+code,kbd,samp,pre,tt,var,input[type='text'],input[type='password'],textarea{font-size:92%;font-family:monaco,"Lucida Console",courier,mono-space}
+pre{white-space:pre}
+pre *{font-size:100%;white-space:pre}
+del{text-decoration:line-through;color:#666}
+ins,dfn{border-bottom:1px solid #ccc}
+small,sup,sub{font-size:85%}
+big{font-size:125%;line-height:80%}
+abbr,acronym{text-transform:uppercase;font-size:85%;letter-spacing:.1em}
+a abbr,a acronym{border:none}
+abbr[title],acronym[title],dfn[title]{cursor:help;border-bottom:1px solid #ccc}
+sup{vertical-align:super}
+sub{vertical-align:sub}
+a:link,a:visited,a:hover,a:active,a:focus{text-decoration:underline}
+blockquote{border-top:1px solid #ccc;border-bottom:1px solid #ccc;color:#666}
+blockquote > *:before{content:"\201C"}
+blockquote > *:after{content:"\201D"}
+q{quotes:"\201C""\201D""\2018""\2019"}
+:lang(af),:lang(nl),:lang(pl){quotes:'\201E' '\201D' '\201A' '\2019'}
+:lang(bg),:lang(cs),:lang(de),:lang(is),:lang(lt),:lang(sk),:lang(sr),:lang(ro){quotes:'\201E' '\201C' '\201A' '\2018'}
+:lang(da),:lang(hr){quotes:'\00BB' '\00AB' '\203A' '\2039'}
+:lang(el),:lang(es),:lang(sq),:lang(tr){quotes:'\00AB' '\00BB' '\2039' '\203A'}
+:lang(en-GB){quotes:'\2018' '\2019' '\201C' '\201D'}
+:lang(fi),:lang(sv){quotes:'\201D' '\201D' '\2019' '\2019'}
+:lang(fr){quotes:'\ab\2005' '\2005\bb' '\2039\2005' '\2005\203a'}
+*[lang|='en'] q:before{content:'\201C'}
+*[lang|='en'] q:after{content:'\201D'}
+*[lang|='en'] q q:before{content:'\2018'}
+*[lang|='en'] q q:after{content:'\2019'}
+fieldset{border:1px solid #ccc}
+legend{background:#fff}
+textarea,input[type='text'],input[type='password'],select{border:1px solid #ccc;background:#fff}
+textarea:hover,input[type='text']:hover,input[type='password']:hover,select:hover{border-color:#aaa}
+textarea:focus,input[type='text']:focus,input[type='password']:focus,select:focus{border-color:#888;outline:2px solid #e4e4e4}
+input[type='text'],input[type='password']{cursor:text}
+input[type='hidden']{display:none}
+/* ---------- COLORS  ---------- */
+a{color:#36c}
+a:visited{color:#009}
+a:hover{color:#c33}
+a:active,.a:focus{color:#000}
+code,pre{color:#c33}
+/* ---------- CONTENT ---------- */
+.content {font-size:1.2em;line-height:1.6em}
+.content h1{font-size:1.6em;line-height:1}
+.content h2{font-size:1.5em;line-height:1}
+.content h3{font-size:1.4em;line-height:1}
+.content h4{font-size:1.3em;line-height:1}
+.content h5{font-size:1.2em;line-height:1}
+.content h6{font-size:1em;line-height:1}
+.content hr{display:block;background:#aaa;color:#aaa;width:100%;height:1px;border:none}
+.content ul{list-style:disc outside}
+.content ol{list-style:decimal outside}
+.content hr,.content p,.content ul,.content ol,.content dl,.content pre,.content blockquote,.content address,.content table,.content form{margin-bottom:1.6em}
+.content p+p{margin-top:-.8em}
+.content h1{margin:1em 0 .5em}
+.content h2{margin:1.07em 0 .535em}
+.content h3{margin:1.14em 0 .57em}
+.content h4{margin:1.23em 0 .615em}
+.content h5{margin:1.33em 0 .67em}
+.content h6{margin:1.6em 0 .8em}
+.content caption{padding-bottom:.8em}
+.content blockquote{padding:0 1em;margin:1.6em 0}
+.content fieldset{padding:1.6em;margin:1.6em 0}
+.content legend{padding-left:.8em;padding-right:.8em;}
+.content legend+*{margin-top:-.4em;}
+.content fieldset *:first-child{margin-top:0;}
+/*.content fieldset *:last-child{margin-bottom:0;}*/
+.content textarea,.content input{padding:.3em .4em .15em .4em}
+.content select{padding:.1em .2em 0 .2em}
+.content select[multiple]{margin-bottom:.8em;}
+.content option{padding:0 .4em .1em}
+.content button{padding:0.3em 0.5em}
+.content input[type='radio']{position:relative;bottom:-.3em;}
+.content dt{margin-top:.8em;margin-bottom:.4em}
+.content ul ul,content ol ul,.content ul ol,content ol ol{margin-bottom:0}
+.content form div{padding-bottom:.8em}
+.content blockquote > *{margin:.8em 0}
+
+@media print {
+    *{background:#fff}
+    html{font-family:serif}
+    body{color:black}
+    blockquote{font-style:italic;color:black;}
+    a:link,a:visited{border-bottom-width:1px;border-bottom-style:solid}
+}

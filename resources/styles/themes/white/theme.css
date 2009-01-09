@@ -1,0 +1,118 @@
+/* Pavel Panchekha, with a bit of help from Kamran Khan */
+
+body, html {
+    background: #FFF;
+}
+
+#header {
+    background: #DDD url("logo.png") no-repeat scroll top left;
+    border-bottom: 1px solid black;
+}
+
+#headerlinks {
+    color: #000;
+}
+
+#headerlinks a {
+    color: #000;
+}
+
+.bar {
+    background: #EEE;
+    color: #000;
+    border-bottom: 1px solid black;
+}
+
+.bar .button {
+    background: #EEE;
+    color: #000;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.bar .button:hover, .bar .clicked {
+    background: #DDD;
+}
+
+.bar .button:active {
+    background: #CCC;
+}
+
+#footer {
+    color:#000;
+    background: #EEE;
+    border-top: 1px solid black;
+}
+
+#main,.dropShadow {
+    background: #FFF url("dropshadow.png") repeat-x top;
+}
+
+button:hover {
+    background-color: #EEE;
+}
+
+button:active {
+    background-color:  #DDD;
+}
+
+.selectitem {
+    border: 1px solid black;
+    background: #FFF;
+}
+
+.selectitem h3 {
+    color: #888;
+}
+
+.selectitem.selected {
+    background-color: #DDD;
+}
+
+#navigation a {
+    color: black;
+    background: #ddd;
+    border: 1px solid black;
+    /*border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -khtml-border-radius: 7px;*/
+}
+
+#navigation a span {
+    color: black;
+}
+
+#navigation a:hover {
+    background-color: #EEE;
+}
+
+#navigation a:active {
+    background-color: #FFF;
+}
+
+#navigation a.disabled {
+    color: #black;
+    background-color: #FFF;
+    border-bottom: 1px solid white;
+    /*border: 1px solid #193441;
+    border-bottom: none;*/
+}
+
+#conDiv {
+    background: #FFF;
+    border: 1px solid black;
+}
+
+#conDiv ul {
+    background: #FFF;
+}
+
+#quicklinks > ul {
+    background: #EEE;
+    border: 1px solid #AAA;
+}
+
+#quicklinks:hover, #quicklinks.selected {
+    border: 1px solid #AAA;
+}

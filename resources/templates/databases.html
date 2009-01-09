@@ -1,0 +1,50 @@
+{include file="header.html" title="Databases" jsfile="databases.js" cssfile="databases.css"}
+
+        <div class="bar" id="menu">
+	    <span class="title">Databases: </span>
+	    <a href="databases/add" class="button write" rel="addForm-show"><img src="resources/images/database_add.png" alt="add" />Add</a>
+	    <a href="databases/delete" class="button write" rel="delForm-show"><img src="resources/images/database_delete.png" alt="del" />Delete</a>
+	    <a href="databases/table" class="button"><img src="resources/images/table.png" alt="table" />View as Table</a>
+	    <a href="databases/xml" class="button"><img src="resources/images/xml.png" alt="xml" />Download as XML</a>
+	</div>
+	<div class="bar second" id="addForm">
+	    <a class="close" href="#"><img src="resources/images/close.png" alt="[X]" /></a>
+	    <span class="title">Add Database:</span>
+	    <form method="post" action="databases/add" id="addFormForm"><fieldset class="hidden">
+	    <label for="dbName-add" class="over">Database Name</label><input id="dbName-add" name="dbName" class="textbox" />
+	    <button type="submit" class="button">Submit</button></fieldset>
+	    </form>
+	</div>
+	<div class="bar second" id="delForm">
+	    <span class="title">Delete Database:</span>
+	    <form method="post" action="databases/delete" id="delFormForm"><fieldset class="hidden">
+	    <label for="dbName-del" class="over">Database Name</label><input id="dbName-del" name="dbName" class="textbox" />
+	    <button type="submit" class="button">Submit</button></fieldset>
+	    </form>
+	    <a class="close" href="#"><img src="resources/images/close.png" alt="[X]" /></a>
+	</div>
+	<div class="drop-shadow"></div>
+	<div class="content">
+	    <ul id="navigation">
+		<li class="selected"><a href="databases"><img src="resources/images/database.png" alt="" /><span>Databases</span></a></li>
+		<li><a href="users"><img src="resources/images/user.png" alt="" /><span>Users</span></a></li>
+		<li><a href="processes"><img src="resources/images/process.png" alt="" /><span>Processes</span></a></li>
+		<li><a href="backup/export"><img src="resources/images/export.png" alt="" /><span>Export</span></a></li>
+		<li><a href="backup/import"><img src="resources/images/import.png" alt="" /><span>Import</span></a></li>
+	    </ul>
+	    <div class="scrolling">
+		<ul>
+{section name=i loop=$databases}
+		    <li class="selectitem database selected">
+		    <img src="resources/images/database.png" alt="" />
+		    <h2 class="name">{$databases[i]->name|escape}</h2>
+		    <h3>Tables: <span class="numTables">{$databases[i]->tables|@count|escape}</a></h3>
+		    <p class="tables">{$databases[i]->tables|@implode:", "|escape}</p>
+		    <a class="url" href="databases/browse/{$databases[i]->name}">Browse</a>
+		    </li>
+{/section}
+		</ul>
+            </div>
+        </div>
+
+{include file="footer.html"}

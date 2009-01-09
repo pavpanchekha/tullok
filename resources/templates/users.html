@@ -1,0 +1,54 @@
+{include file="header.html" title="Users" jsfile="users.js" cssfile="users.css"}
+
+        <div class="bar" id="menu">
+            <span class="title">Users: </span>
+            <a href="users/add" class="button write" rel="addForm-show"><img src="resources/images/user_add.png" alt="add" />Add</a>
+            <a href="users/delete" class="button write" rel="delForm-show"><img src="resources/images/user_delete.png" alt="del" />Delete</a>
+        </div>
+        <div class="bar second" id="addForm">
+            <a class="close" href="#"><img src="resources/images/close.png" alt="[X]" /></a>
+            <span class="title">Add User:</span>
+            <form method="post" action="users/add" id="addFormForm"><fieldset class="hidden">
+                <label for="usrName-add" class="over">Username</label><input id="usrName-add" name="usrName" class="textbox" />
+                <input type="checkbox" class="checkbox" name="read">Read</input>
+                <input type="checkbox" class="checkbox" name="edit">Edit</input>
+                <input type="checkbox" class="checkbox" name="tables">Manage Tables</input>
+                <input type="checkbox" class="checkbox" name="users">Manage Users</input>
+                <input type="checkbox" class="checkbox" name="admin">Administrator</input>
+                <button type="submit" class="button">Submit</button></fieldset>
+            </form>
+        </div>
+        <div class="bar second" id="delForm">
+            <span class="title">Delete User:</span>
+            <form method="post" action="users/delete" id="delFormForm"><fieldset class="hidden">
+                <label for="usrName-del" class="over">Username</label><input id="usrName-del" name="usrName" class="textbox" />
+                <button type="submit" class="button">Submit</button></fieldset>
+            </form>
+            <a class="close" href="#"><img src="resources/images/close.png" alt="[X]" /></a>
+        </div>
+	<div class="drop-shadow" />
+        <div class="content">
+            <ul id="navigation">
+                <li><a href="databases"><img src="resources/images/database.png" alt="" /><span>Databases</span></a></li>
+                <li class="selected"><a href="users"><img src="resources/images/user.png" alt="" /><span>Users</span></a></li>
+                <li><a href="processes"><img src="resources/images/process.png" alt="" /><span>Processes</span></a></li>
+                <li><a href="backup/export"><img src="resources/images/export.png" alt="" /><span>Export</span></a></li>
+                <li><a href="backup/import"><img src="resources/images/import.png" alt="" /><span>Import</span></a></li>
+            </ul>
+            <div class="scrolling">
+            <ul>
+{section name=i loop=$users}
+                <li class="selectitem database selected">
+          	    <img src="resources/images/user.png" alt="" />
+                    <h2 class="name">{$users[i]->name|escape}</h2>
+                    <h3 class="host">{$users[i]->host|replace:"%":"*"|escape}</h3>
+                    <p class="perm">{$users[i]->getPermString()}</p>
+                    <a href="databases/browse/{$databases[i]->name}">Edit</a>
+                </li>
+{/section}
+            </ul>
+            </div>
+            <div class="dropShadow"></div>
+        </div>
+
+{include file="footer.html"}

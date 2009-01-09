@@ -1,0 +1,4 @@
+resources/secure/config.ini
+cache/*
+.bzr/*
+.bzr

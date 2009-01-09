@@ -1,0 +1,309 @@
+/* Pavel Panchekha and Kamran Kahn */
+
+body, html{
+    margin: 0;
+}
+
+img {
+    margin: 0 3px;
+}
+
+#header {
+    width: 100%;
+    height: 3em;
+    min-height: 64px;
+    position: static;
+}
+
+#headerlinks {
+    float: right;
+    width: 35ex;
+    min-width: 100px;
+    font-size: 100%;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+#headerlinks li {
+    margin: 1px;
+    position: relative;
+}
+
+#headerlinks a {
+    text-decoration: none;
+}
+
+#headerlinks img {
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+#menu {
+    display: block;
+}
+
+.bar{
+    padding-left: 10px;
+    height: 3em;
+    line-height: 3em;
+    position:static;
+    display: none;
+}
+
+.bar .close {
+    float: right;
+    position:relative;
+    right: 5px;
+}
+
+.bar .close img {
+    vertical-align: middle;
+}
+
+.bar form {
+    display: inline;
+    margin-left:6px;
+    float:left;
+}
+
+.bar span.title {
+    line-height: 30px;
+    float:left;
+}
+
+.bar .button {
+    height: 3em;
+    margin: 0px 0px 0px 10px;
+    text-decoration:none;
+    line-height: 3em;
+    padding: 0px 5px;
+    border: none;
+}
+
+.bar a.button {
+    display: block;
+    float: left;
+}
+
+.bar a.button.write {
+    display: none;
+}
+
+body.editable .bar a.button.write {
+    display: block;
+}
+
+.bar .button img {
+    position:relative;
+    top:4px;
+    margin-right:5px;
+}
+
+.textbox {
+    position: relative;
+    top: -1px;
+}
+
+.drop-shadow {
+    height: 50px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+}
+
+#footer .clickable {
+    float: right;
+    position: relative;
+    top: 1.5em;
+    margin-top: -8px;
+    border: none;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#console .clickable {
+    top: 1em;
+}
+
+#footer .status {
+    margin-left: 10px;
+    width: 600px;
+    float: left;
+}
+
+#console {
+    display: none;
+    height: 18em;
+    width: 100%;
+    float: left;
+}
+
+#footer ul {
+    height: 18em;
+    overflow: auto;
+}
+
+.editable #footer ul {
+    height: 16em;
+}
+
+#footer li {
+    padding-left: 10px;
+    color: black;
+    line-height: 1.5;
+    font-size: 1.2em;
+}
+
+#footer form {
+    border: none;
+    margin: -1px 0 0 0;
+    padding: 0;
+    line-height: 1.8;
+    display: none;
+}
+
+#console input.text {
+    border: none;
+    background: transparent;
+    color: white;
+    position: absolute;
+    padding: 0;
+    font-family: monospaced;
+    font-size: 1.5em;
+    width: 95%;
+    text-indent: 0.5em;
+    margin-top: 2px;
+}
+
+#console .code {
+    padding-left: 21px;
+    background: url("../images/code.png") scroll no-repeat top left;
+}
+
+#console .results {
+    padding-left: 21px;
+    background: url("../images/results.png") scroll no-repeat top left;
+}
+
+.console #footer {
+    height: 21em;
+}
+
+.console #footer #console {
+    display: block;
+}
+
+.console.editable #footer #console form {
+    display: block;
+}
+
+button {
+    border: 1px solid black;
+    display: inline;
+    cursor: pointer;
+}
+
+input {
+    border: 1px solid black;
+    padding: 1px;
+}
+
+input.checkbox {
+    margin: 5px;
+    position: relative;
+    top: .2em;
+    border: 1px solid black;
+}
+
+fieldset.hidden {
+    border: none;
+    margin: 0;
+    padding: 0;
+    /* Validation sucks, doesn't it */
+}
+
+li#quicklinks {
+    cursor: pointer;
+    z-index: 100;
+    margin-right: 10px;
+}
+
+#quicklinks:hover, #quicklinks.selected {
+    margin: -1px 10px 0 0;
+}
+
+#quicklinks:hover {
+    background: url("../images/down.png") scroll no-repeat right center;
+}
+
+#quicklinks.selected {
+    background: url("../images/up.png") scroll no-repeat right center;
+    border-bottom: 0px;
+}
+
+#quicklinks > ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+    min-height: 1.2em;
+    line-height: 1.2em;
+    margin-left: -1px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+#quicklinks li.database ul {
+    margin-left: 20px;
+}
+
+#quicklinks li.database span.num {
+    font-style: italic;
+}
+
+#quicklinks ul li {
+    line-height: 1.5em;
+}
+
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+    margin: 2px;
+}
+
+table th {
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table th, table td {
+    padding: 3px;
+    border: 1px solid black;
+}
+
+th.header {
+    cursor: pointer;
+}
+
+th.headerSortDown {
+    padding-right: 21px;
+    background: transparent url("../images/down.png") scroll no-repeat right center;
+}
+
+th.headerSortUp {
+    padding-right: 21px;
+    background: transparent url("../images/up.png") scroll no-repeat right center;
+}
+
+.scrolling table {
+    margin-right: 10px;
+}
+
+.scrolling table td {
+    overflow: hidden;
+}

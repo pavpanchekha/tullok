@@ -1,0 +1,30 @@
+{include file="header.html" title="Databases" jsfile="databases.js" cssfile="databases.css"}
+
+        <div class="bar" id="menu">
+	    <span class="title">{$dbName}:</span>
+	</div>
+	<div class="drop-shadow"></div>
+	<div class="content">
+	    <ul id="navigation">
+		<li class="selected"><a href="databases"><img src="resources/images/database.png" alt="" /><span>Databases</span></a></li>
+		<li><a href="users"><img src="resources/images/user.png" alt="" /><span>Users</span></a></li>
+		<li><a href="processes"><img src="resources/images/process.png" alt="" /><span>Processes</span></a></li>
+		<li><a href="backup/export"><img src="resources/images/export.png" alt="" /><span>Export</span></a></li>
+		<li><a href="backup/import"><img src="resources/images/import.png" alt="" /><span>Import</span></a></li>
+	    </ul>
+	    <div class="scrolling">
+		<ul>
+{section name=i loop=$databases}
+		    <li class="selectitem database selected">
+		    <img src="resources/images/database.png" alt="" />
+		    <h2 class="name">{$databases[i]->name|escape}</h2>
+		    <h3>Tables: <span class="numTables">{$databases[i]->tables|@count|escape}</a></h3>
+		    <p class="tables">{$databases[i]->tables|@implode:", "|escape}</p>
+		    <a class="url" href="databases/browse/{$databases[i]->name}">Browse</a>
+		    </li>
+{/section}
+		</ul>
+            </div>
+        </div>
+
+{include file="footer.html"}

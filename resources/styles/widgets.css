@@ -1,0 +1,129 @@
+/* Pavel Panchekha and Kamran Kahn */
+
+/* SelectItem Widget */
+
+.selectitem {
+    border-top: 1px solid #193441;
+    border-bottom: 1px solid #193441;
+    padding: 5px;
+    position: relative;
+    margin-bottom: -1px;
+    cursor: pointer;
+    padding: 5px 5px 5px 34px;
+    color: black;
+}
+
+.selectitem img {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.selectitem h2 {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.selectitem h3 {
+    font-weight: normal;
+    font-size: 100%;
+    font-style: italic;
+}
+
+.selectitem p, .selectitem a {
+    display: none;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.selectitem a {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.selectitem.selected h3 {
+    padding-bottom: 8px;
+}
+
+.selectitem.selected p, .selectitem.selected a {
+    display: block;
+}
+
+/* Message Box Widget */
+
+.msg {
+    margin: 10px 5px;
+    font-size: 120%;
+    /*border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;*/
+}
+
+.msg div {
+    padding: 2px 2px 2px 12px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.msg.success {
+    border: 5px solid #0F0;
+    background: #CFC url("../images/tick.png") scroll no-repeat 2px center;
+}
+
+.msg.error {
+    border: 5px solid #F00;
+    background: #FCC url("../images/close.png") scroll no-repeat 2px center;
+}
+
+/* Confirmation Dialog */
+
+.confirm {
+    width: 300px;
+    margin: 10px 50%;
+    position: relative;
+    left: -175px;
+    border: 5px solid red;
+    background: #FCC url("../images/warning.png") scroll no-repeat 2px center;
+    padding: 2px 2px 2px 40px;
+    text-align: center;
+}
+
+.confirm h2 {
+    font-size: 200%;
+    color: red;
+    margin-bottom: 5px;
+}
+
+.confirm p {
+    font-size: 150%;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.confirm .line {
+    text-align: center;
+    display: block;
+    color: #800;
+    font-weight: bold;
+    font-size: 160%;
+}
+
+.confirm form {
+    display: inline;
+}
+
+/* Overlabel */
+
+label.over {
+    position: absolute;
+    padding-top: 5px;
+    padding-left: 4px;
+    font-weight: bold;
+    color: #888;
+    z-index: 1;
+    font-size: 100%;
+    cursor: text;
+    display: none;
+}

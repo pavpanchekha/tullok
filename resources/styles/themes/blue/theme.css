@@ -1,0 +1,151 @@
+/* Kamran Khan, with a bit of help from Pavel Panchekha */
+
+body, html {
+    background: #FCFFF5;
+}
+
+#header {
+    background: #193441 url("logo.png") no-repeat scroll top left;
+}
+
+#headerlinks {
+    color: #FCFFF5;
+}
+
+#headerlinks a {
+    color: #FCFFF5;
+}
+
+.bar {
+    background: #3E606F;
+    color: #FCFFF5;
+}
+
+.bar.second {
+    background: #91AA9D;
+}
+
+.bar.third {
+    background: #C5D5CD;
+    color: black;
+}
+
+.bar .button {
+    background: #3E606F;
+    color:#FCFFF5;
+}
+
+.bar.second .button {
+    background: #91AA9D;
+}
+
+.bar.second .button:hover, .bar.second .clicked {
+    background: #3E606F;
+}
+
+.bar.third .button {
+    background: #C5D5CD;
+}
+
+.bar.third .button:hover, .bar.second .clicked {
+    background: #91AA9D;
+}
+
+.bar .button:hover, .bar .clicked {
+    background: #91AA9D;
+}
+
+#footer {
+    color:#FCFFF5;
+    background: #193441;
+}
+
+#footer ul {
+    background: #91AA9D;
+}
+
+#footer ul li{
+    border-bottom: 1px solid #193441;
+}
+
+.drop-shadow {
+    background: #FCFFF5 url("dropshadow.png") repeat-x top;
+}
+
+button:hover {
+    background-color: #EEE;
+}
+
+button:active {
+    background-color:  #DDD;
+}
+
+.selectitem {
+    background: #FCFFF5;
+}
+
+.selectitem h2, .selectitem h3 {
+    margin: 0;
+}
+
+.selectitem h3 {
+    color: #888;
+}
+
+.selectitem.selected {
+    background-color: #D1DBBD;
+}
+
+#navigation li {
+    color: #FCFFF5;
+    background: #3E606F;
+    border: 1px solid #3E606F;
+    /*border: 1px solid #193441;
+    border-bottom: none;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -khtml-border-radius: 7px;*/
+}
+
+#navigation a {
+    color: #FCFFF5;
+    text-decoration: none;
+}
+
+#navigation li:hover {
+    background-color: #2B4C5C;
+    border: 1px solid #2B4C5C;
+}
+
+#navigation li:active {
+    background-color: #91AA9D;
+    border: 1px solid #91AA9D;
+}
+
+#navigation li.selected {
+    color: #FCFFF5;
+    background-color: #193441;
+    border: 1px solid #193441;
+}
+
+.scrolling {
+    border: 20px solid #193441;
+}
+
+.scrolling > * {
+    background: #FCFFF5;
+}
+
+#quicklinks > ul {
+    background: #3E606F;
+    border: 1px solid #91AA9D;
+}
+
+#quicklinks:hover, #quicklinks.selected {
+    border: 1px solid #91AA9D;
+}
+
+#console tr.even {
+    background: #799;
+}

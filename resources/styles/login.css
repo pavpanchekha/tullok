@@ -1,0 +1,88 @@
+@import "widgets.css";
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.nodisplay {
+    margin-top: -15px;
+    border: none;
+}
+
+#main {
+    height: 403px;
+    width: 551px;
+    margin: 88px auto 0 auto;
+}
+
+#header {
+    width: 100%;
+    height: 60px;
+}
+
+.msg.error {
+    border: 2px solid red;
+    padding: 7px;
+    margin: 0 15px 15px 15px;
+}
+
+form {
+    padding: 15px;
+    width: 521px;
+}
+
+#form {
+    height: 298px;
+    padding-top: 15px;
+}
+
+form div {
+    position: relative;
+}
+
+#footerLogin {
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    position: relative;
+    bottom: 0;
+}
+
+#footerLogin p {
+    padding-left: 10px;
+}
+
+#main input {
+    border: 1px solid black;
+    font-size: 150%;
+    padding: 2px;
+    width: 492px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    outline: none;
+    font-family: Helvetica, Arial, "Sans Serif";
+}
+
+label.over {
+    font-size: 150%;
+    background: none;
+    padding-top: 10px;
+    font-family: Calibri, Helvetica, Arial, "Sans Serif";
+}
+
+legend {
+    background: none;
+    font-size: 150%;
+}
+
+fieldset{
+    padding: 10px;
+}
+
+button {
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 6px;
+    float: right;
+}

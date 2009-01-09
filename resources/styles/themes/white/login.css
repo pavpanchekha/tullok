@@ -1,0 +1,31 @@
+/* blue login */
+body, html {
+    background: #FFF;
+}
+
+body {
+    background: url("login.png") no-repeat top center;
+}
+
+#main {
+    background: #FFF;
+}
+
+#header {
+    background: #EEE url("logo.png") no-repeat scroll top left;
+    border-bottom: 1px solid black;
+}
+
+#footerLogin {
+    border-top: 1px solid black;
+    background: #EEE;
+    color: #000;
+}
+
+#footerLogin p {
+    color: #000;
+}
+
+fieldset {
+    border: 1px solid #000;
+}

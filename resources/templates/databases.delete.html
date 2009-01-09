@@ -1,0 +1,74 @@
+{if not isset($thickbox) or not $thickbox}
+    {include file="header.html" title="Delete Database" jsfile="databases.delete.js" cssfile="databases.delete.css"}
+{else}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Re-anchor page -->
+        <base href="{$root}{$path}" />
+        <!-- Page Metadata -->
+        <title> Tullok: Add Database </title>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+        {include file="resources.html" title="Databases"}
+        <!-- CSS files -->
+        <link rel="stylesheet" type="text/css" href="resources/styles/databases.delete.css"></script>
+    {if isset($thickbox) and $thickbox}
+        <script type="text/javascript">thickbox = true</script>
+    {/if}
+        <script type="text/javascript" src="resources/scripts/databases.delete.js"></script>
+    </head>
+    <body>
+{/if}
+{if (not isset($dbName) or not $dbName) or (isset($deleted) and $deleted)}
+      <div class="drop-shadow"></div>
+      <div class="content">
+	<div class="scrolling">
+        {$Error}
+        {if isset($deleted) and $deleted}
+        {if not isset($Error) or not $Error}
+          <div class="msg success"><div><div>
+            Database {if isset($dbName) and $dbName}&ldquo;{$dbName}&rdquo;{/if} deleted successfully.
+        {if not isset($thickbox) or not $thickbox}
+            <a href="databases/" title="View all databases">&laquo; Back to Databases</a>
+        {/if}
+          </div></div></div>
+        {else}
+          <div class="msg error"><div><div>
+            Errors deleting {if isset($dbName) and $dbName}&ldquo;{$dbName}&rdquo;{/if}: {$Error}
+        {if not isset($thickbox) or not $thickbox}
+            <a href="databases/" title="View all databases">&laquo; Back to Databases</a>
+        {/if}
+          </div></div></div>
+        {/if}
+        {/if}
+          <form method="post" action="databases/delete{if $thickbox}?thickbox{/if}" id="delForm">
+            <label for="dbName" class="over">Database Name</label><input id="dbName" name="dbName" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+	</div>
+{elseif (not isset($sure) or not $sure) and (isset($dbName) and $dbName)}
+        <div class="confirm">
+            <h2>Careful!</h2>
+            <p>
+                Are you sure you want to <strong>completely destroy</strong> this database?
+                <span class="line">{$dbName}</span>
+                There is <strong>no way</strong> to undo this action!
+            </p>
+            <form method="post" action="databases/delete{if isset($thickbox) and $thickbox}?thickbox{/if}">
+                <input type="hidden" name="dbName" value="{$dbName}" />
+                <button type="submit" id="cancel">Cancel</button>
+            </form>
+            <form method="post" action="databases/delete{if isset($thickbox) and $thickbox}?thickbox{/if}">
+                <input type="hidden" name="dbName" value="{$dbName}" />
+                <input type="hidden" name="sure" value="yes" />
+                <button type="submit" id="submit">I am sure.</button>
+            </form>
+        </div>
+{/if}
+{if not isset($thickbox) or not $thickbox}
+    {include file="footer.html"}
+{else}
+    </body>
+</html>
+{/if}
